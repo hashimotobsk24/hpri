@@ -1,0 +1,675 @@
+.wrap {
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+header {
+  height: 100vh;
+  width: 1410px;
+  background-image: url(../img/visual_2_pc.png);
+  background-size: cover;
+}
+
+.blackbox {
+    height: 800px;
+    width: 800px;
+    background-color:rgb(42,42,42);
+    position: absolute;
+    top: 10px;
+    left: -450px;
+    transform: rotate(-45deg);
+}
+
+.name {
+    font-size: 60px;
+    color: white;
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+.graybox {
+    height: 300px;
+    width: 1200px;
+    background-color: rgb(214,214,215);
+    transform: rotate(-45deg);
+    position: relative;
+    top: 600px;
+    left: 680px;
+}
+
+.whitebox {
+    height: 600px;
+    width: 900px;
+    background-color: rgb(238,238,239);
+    transform: rotate(-30deg);
+    position: relative;
+    top: 550px;
+    left: 755px;
+}
+
+.whiteright {
+    height: 400px;
+    width: 400px;
+    background-color: rgb(238,238,239);
+    transform: rotate(-30deg);
+    position: relative;
+    top: 252px;
+    left: 450px;
+
+}
+
+.whiteleft {
+    height: 400px;
+    width: 900px;
+    background-color: rgb(238,238,239);
+    transform: rotate(-45deg);
+    position: relative;
+    top: -700px;
+    left: -300px; 
+    z-index: -1;
+}
+
+.up {
+    height: 60px;
+    width: 60px;
+    background-color: rgb(42,42,42);
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.up i {
+    color: white;
+}
+
+.news h1 {
+    font-size: 250px;
+    position: relative;
+    top: 250px;
+    left: 550px;
+}
+
+.topic {
+    height: 800px;
+    width: 1260px;
+    background-color: white;
+    position: relative;
+    top: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.firstpost {
+    position: relative;
+    bottom: 50px;
+    left: 30px;
+    padding: 20px;
+}
+
+/* １投稿目のアニメーション設定 */
+
+.postani {
+    overflow: hidden;
+}
+
+.seemorein {
+    position: relative;
+    height: 350px;
+    width: 550px;
+    transition-duration: 0.3s;
+}
+
+.seemorein:hover {
+    transform: scale(1.1);
+}
+
+.seemorein::before {
+    content: "See More";
+    position: absolute;
+    background-color: rgb(0,0,0,.6);
+    height: 350px;
+    width: 550px;
+    transition-duration: 0.3s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 30px;
+}
+
+
+
+.seemorein:hover:before {
+    opacity: 1;
+}
+
+
+.firstpost img {
+    transition-duration: 0.3s;
+}
+
+.firstpost img:hover {
+    transform: scale(1.1);
+    transition-duration: 0.3s;
+    opacity: 0.6;
+}
+
+.postopa {
+    height: 350px;
+    width: 550px;
+}
+
+/* ２投稿以降の設定 */
+
+.seemoreinpost {
+    position: relative;
+    height: 150px;
+    width: 250px;
+    transition-duration: 0.3s;
+}
+
+.seemoreinpost:hover {
+    transform: scale(1.1);
+}
+
+.seemoreinpost:before {
+    content: "See More";
+    position: absolute;
+    background-color: rgb(0,0,0,.6);
+    height: 150px;
+    width: 250px;
+    transition-duration: 0.3s;
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    font-size: 30px;
+}
+
+.seemoreinpost:hover:before {
+    opacity: 1;
+}
+
+.secondpostopa {
+    height: 150px;
+    width: 250px;
+}
+
+
+
+.theme {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.themename {
+    height: 27px;
+    width: 100px;
+    color: white;
+    font-size:10px; 
+    background-color: rgb(42,42,42); 
+    display: flex;
+    text-align: center;
+}
+
+.themename p {
+    height: 27px;
+    width: 100px;
+}
+
+
+.firstpost p {
+    margin: 10px;
+}
+
+.firstpost img {
+    height: 350px;
+    width: 550px;
+}
+
+.post {
+    margin-left: 30px;
+}
+
+.post:nth-child(-n+3) {
+    margin-top: 160px;
+}
+
+.post p {
+    padding: 10px;
+}
+
+.post img {
+    height: 150px;
+    width: 250px;
+}
+
+.sideg {
+    height: 800px;
+    width: 400px;
+    background-color:  rgb(238,238,239);
+    position: relative;
+    bottom: 700px;
+    left: 850px;
+    z-index: -1;
+}
+
+.postsee {
+    height: 75px;
+    width: 400px;
+    background-color: rgb(42,42,42);
+    position: relative;
+    top: 75px;
+    left: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-origin: left right;
+    transition: .5s;
+}
+
+.postsee::before {
+    display: inline-block;
+    transform: scale(0,1);
+}
+
+.postsee:hover {
+    background-color: black;
+    transform: scale(1,1);
+}
+
+
+.postsee p {
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.fisspace {
+    height: 700px;
+    width: 100%;
+    background-color: rgb(238,238,239);;
+}
+
+.service {
+    height: 900px;
+    width: 100%;
+}
+
+.fisspace h1 {
+    font-size: 250px;
+    position: relative;
+    top: 500px;
+    left: 100px;
+}
+
+/* mission */
+
+.mission {
+    height: 800px;
+    width: 90%;
+    background-color: white;
+    float: right;
+    display: flex;
+    box-shadow: 0 0 10px rgb(0,0,0,.3);
+}
+
+
+.onepic {
+    height: 350px;
+    width: 550px;
+    background-image: url(../img/visual_1_pc.png);
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.twopic {
+    height: 225px;
+    width: 325px;
+    background-image: url(../img/post_img_4.png);
+    position: relative;
+    left: 400px;
+}
+
+.treepic {
+    height: 175px;
+    width: 275px;
+    background-image: url(../img/post_img_6.png);
+    position: relative;
+    bottom: 100px;
+    left: 75px;
+}
+
+.misright {
+    height: 600px;
+    width: 400px;
+    position: relative;
+    top: 100px;
+    left: 250px;
+}
+
+.misright h1 {
+    font-size: 40px;
+    padding:20px;
+}
+
+.misright h2 {
+    font-size: 35px;
+    padding:10px;
+}
+
+.misright p {
+    padding:10px;
+}
+
+.misbtn {
+    height: 75px;
+    width: 400px;
+    background-color: rgb(42,42,42);
+    position: relative;
+    top: 75px;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.misbtn p {
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.misbtn i {
+    color: white; 
+}
+
+.cmpspace {
+    height: 400px;
+    width: 100%;
+    background-color:  rgb(238,238,239);
+}
+
+.cmpspace h1 {
+    font-size: 250px;
+    position: relative;
+    top: 170px;
+    left: 200px;
+}
+
+/* vision */
+
+
+.vision {
+    height: 750px;
+    width: 1700px;
+    background-color:  rgb(238,238,239);
+    display: flex;
+}
+
+.visleft {
+    height: 750px;
+    width: 1700px;
+    background-image: url(../img/visual_6_pc.png);
+    background-size: cover;
+    position: relative;
+    top: 60px;
+    left: 0px;
+}
+
+.visright {
+    height: 750px;
+    width: 2000px;
+    z-index: 1;
+    background-color: white;
+    box-shadow: 0 0 10px rgb(0,0,0,.3);
+}
+
+.visimg {
+    height: 300px;
+    width: 450px;
+    background-image: url(../img/visual_7_pc.png);
+    background-size: cover;
+    position: relative;
+    top: 150px;
+    left: 100px;
+}
+
+.vissentence {
+    position: relative;
+    top: 150px;
+    left: 100px;
+}
+
+.vissentence h1 {
+    font-size: 40px;
+    margin-top:60px;
+    margin-bottom:10px;
+}
+
+.vissentence h2 {
+    font-size: 30px;
+    margin-top:30px;
+    margin-bottom:20px;
+}
+
+.visbutton {
+    height: 75px;
+    width: 600px;
+    background-color: rgb(42,42,42);
+    position: relative;
+    top: 700px;
+    right: 550px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.visbutton p {
+    color: white;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.visbutton i {
+    color: white;
+}
+
+
+.recspace {
+    height: 500px;
+    width: 100%;
+    background-color: white;
+}
+
+.recspacecolor {
+    height: 800px;
+    width: 1400px;
+    position: relative;
+    right: 300px;
+    bottom: 250px;
+    background-color:  rgb(238,238,239);
+    transform: rotate(15deg);
+}
+
+.recruit {
+    height: 800px;
+    width: 1700px;
+    background-color: rgb(42,42,42);
+    transform: rotate(-10deg);
+    position: relative;
+    right: 85px;
+    z-index: 2;
+}
+
+.recsentence {
+    color: white;
+    height: 500px;
+    width: 100%;
+    transform: rotate(10deg);
+    position: relative;
+    top: 100px;
+    left: 100px;
+}
+
+.recsentence h1 {
+    font-size: 250px;
+    padding:20px;
+}
+
+.recsentence h2 {
+    font-size: 30px;
+    padding-left: 200px;
+    margin: 30px;
+}
+
+.recsentence p {
+    font-size: 20px;
+    padding-left: 400px;
+    margin: 10px;
+}
+
+.recbutton {
+    height: 85px;
+    width: 360px;
+    border: 2px solid white;
+    background-color: rgb(42,42,42);
+    /* background-color: white; */
+    position: relative;
+    top: 100px;
+    left: 500px;
+    color: white;
+}
+
+.recbutton p{
+    height: 80px;
+    width: 300px;
+    font-size: 20px;
+    position: relative;
+    top: 25px;
+    right: 280px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.bacimg {
+    height: 500px;
+    width: 100%;
+    background-image: url(../img/visual_1_pc.png);
+    background-size: cover;
+    position: relative;
+    top: 1150px;
+    z-index: -2;
+}
+
+footer {
+    height: 300px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+    top: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer h1 {
+    font-size: 60px;
+    padding-right: 50px;
+    border-right: 2px solid rgb(238,238,239);
+    position: relative;
+    left: -100px;
+    display: block;
+}
+
+.ftmenuone{
+    display: flex;
+}
+
+.ftmenuone li {
+    font-size: 30px;
+    padding-right: 50px;
+}
+
+.ftmenutwo {
+    display: flex;
+    padding-top: 30px;
+}
+
+.ftmenutwo li {
+    padding: 20px;
+    border-right: 1px solid rgb(238,238,239);
+}
+
+
+.ft {
+    height: 350px;
+}
+
+
+/* レスポンシブ  */
+
+
+@media screen and (max-width:480px) {
+
+
+    .header {
+        height: 100vh;
+        width: 480px;
+        background-size: cover;
+    }
+    .blackbox {
+        height: 600px;
+        width: 600px;
+        position: relative;
+        right: 300px;
+    }
+
+    .whiteleft {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+
+    .graybox {
+        position: absolute;
+        top: 50px;
+        left: 200px;;
+    }
+
+    .whiteright {
+        position: absolute;
+        top: 400px;
+        left: 300px;
+    }
+
+    .whitebox {
+        position: absolute;
+        top: 450px;
+        left: -10px;
+    }
+    .name p {
+        font-size: 30px;
+        position: relative;
+        right: 50px;
+        bottom: 50px;
+    }
+
+    .up {
+        display: none;
+    }
+}
